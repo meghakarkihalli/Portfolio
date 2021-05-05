@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@local": ["src/components"],
+      "@common": ["src/common"],
+      "@image": ["src/images"]
+    }
+  }
+}

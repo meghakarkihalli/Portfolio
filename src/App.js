@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from 'react'
+import NavBar from '@local/navbar'
+import Home from '@local/home'
+import Resume from '@local/resume'
+import Footer from '@local/footer'
+import './App.css'
 
 function App() {
+  const homeRef = useRef(null)
+  const resumeRef = useRef(null)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <NavBar
+        homeRef={homeRef}
+        resumeRef={resumeRef}
+      />
+      <Home ref={homeRef} />
+      <Resume ref={resumeRef} />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
