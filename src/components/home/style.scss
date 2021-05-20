@@ -1,8 +1,31 @@
+@import '@common/styles/style';
+
 .home {
-  height: 640px;
-  border: 2px solid blue;
-  // background-image: url('./../../images/backtwo.jpeg');
+  height: 720px;
+  background-image: url('./../../images/home.png');
   background-size: 100% 100%;
-  height: 640px;
-  padding-top: 112px;
+  padding-top: 56px;
+  &__container{
+    padding: 8px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include mobile-up {
+  .home {
+    height: 640px;
+    padding-top: 112px;
+    &__container {
+      padding: 24px 0;
+      max-width: 1024px;
+      width: 100%;
+      margin: 0 auto;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+    }
+  }
 }

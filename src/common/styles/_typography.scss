@@ -1,0 +1,69 @@
+@mixin typography-base {
+  font-family: "Source Sans Pro", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin font-weight($weight: regular) {
+  $typography-font-weight-values: (
+    regular: 400,
+    semi-bold: 600,
+    bold: 700
+  );
+  @if not map-has-key($typography-font-weight-values, $weight) {
+    @error "Invalid weight specified! Choose one of #{map-keys($typography-font-weight-values)}";
+  }
+  font-weight: map-get($typography-font-weight-values, $weight);
+}
+
+@mixin typography($scale: m, $weight: regular) {
+  $typography-scales: (
+    xxxl: (
+      font-size: 36px,
+      letter-spacing: 0.6px,
+      line-height: 48px
+    ),
+    xxl: (
+      font-size: 28px,
+      letter-spacing: 0.3px,
+      line-height: 36px
+    ),
+    xl: (
+      font-size: 22px,
+      letter-spacing: 0.3px,
+      line-height: 28px
+    ),
+    l: (
+      font-size: 18px,
+      letter-spacing: 0.2px,
+      line-height: 24px
+    ),
+    m: (
+      font-size: 16px,
+      letter-spacing: 0.2px,
+      line-height: 20px
+    ),
+    s: (
+      font-size: 14px,
+      letter-spacing: 0.2px,
+      line-height: 16px
+    ),
+    xs: (
+      font-size: 12px,
+      letter-spacing: 0.1px,
+      line-height: 16px
+    )
+  );
+
+  // Error handling
+  @if not map-has-key($typography-scales, $scale) {
+    @error "Invalid style specified! Choose one of #{map-keys($typography-scales)}";
+  }
+
+  // Output typography
+  $scale-props: map-get($typography-scales, $scale);
+  @each $key, $value in $scale-props {
+    #{$key}: $value;
+  }
+  @include font-weight($weight)
+}

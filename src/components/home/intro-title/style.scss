@@ -1,0 +1,36 @@
+@import '@common/styles/style';
+
+.intro-title {
+  border: 1px solid;
+  width: 100%;
+  &__name {
+    margin: 24px 0;
+    font-size: 48px;
+  }
+  &__text {
+    color: $dark-gray;
+  }
+  &__btns {
+    margin: 24px 0;
+  }
+  &__hire-btn {
+    height: 40px;
+    width: 120px;
+    margin: 4px;
+  }
+  &__resume-btn {
+    height: 40px;
+    width: 220px;
+    margin: 4px;
+  }
+}
+
+@include mobile-up {
+  .intro-title {
+    width: 60%;
+    &__name {
+      margin: 24px 0;
+      font-size: 56px;
+    }
+  }
+}

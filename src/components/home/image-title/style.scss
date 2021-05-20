@@ -1,0 +1,18 @@
+@import '@common/styles/style';
+
+.image__container {
+  height: 280px;
+  width: 200px;
+  border: 1px solid;
+  background-image: url('../../../images/megha.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@include mobile-up {
+  .image__container {
+    height: 360px;
+    width: 280px;
+    border-radius: 50%;
+  }
+}

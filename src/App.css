@@ -3,4 +3,6 @@
 .App {
   font-family: 'Nunito', sans-serif;
   text-align: center;
+  margin: 0 auto;
+  color: #3D3D3D;
 }

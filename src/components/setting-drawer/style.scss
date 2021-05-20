@@ -1,0 +1,100 @@
+@import '@common/styles/style';
+
+.settings {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  font-size: 24px;
+  background: $white;
+  overflow: hidden;
+  transition: left 0.5s linear;
+  &__showDrawer {
+    left: 160px;
+    transition: left 0.5s linear;
+  }
+  &__gear {
+    animation: spinning 2s infinite linear;
+    &--light-blue {
+      color: $light-blue;
+    }
+    &--dark-blue {
+      color: $dark-blue;
+    }
+    &--red {
+      color: $red;
+    }
+    &--yellow {
+      color: $yellow;
+    }
+    &--light-green {
+      color: $light-green;
+    }
+    &--dark-green {
+      color: $dark-green;
+    }
+  }
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.drawer {
+  border: 1px solid $light-gray;
+  background: $light-gray;
+  width: 160px;
+  position: fixed;
+  top: 20%;
+  left: -168px;
+  transition: left 0.5s linear;
+  &__clicked{
+    left: 0;
+    transition: left 0.5s linear;
+  }
+  &__header {
+    margin: 8px;
+    @include typography(xxl, semi-bold);
+  }
+  &__palate {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    justify-content: space-evenly;
+  }
+  &__color {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    border: none;
+    border-radius: 50%;
+    &--light-blue {
+      background: $light-blue;
+    }
+    &--dark-blue {
+      background: $dark-blue;
+    }
+    &--red {
+      background: $red;
+    }
+    &--yellow {
+      background: $yellow;
+    }
+    &--light-green {
+      background: $light-green;
+    }
+    &--dark-green {
+      background: $dark-green;
+    }
+  }
+}

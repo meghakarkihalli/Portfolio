@@ -1,5 +1,8 @@
+@import '@common/styles/style';
+
 .resume {
   height: 640px;
-  border: 2px solid red;
+  // border: 2px solid red;
   padding-top: 112px;
+  background: $light-gray;
 }

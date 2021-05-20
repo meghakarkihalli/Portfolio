@@ -9,4 +9,6 @@ body, button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  padding: 0;
+  color: #3D3D3D;
 }

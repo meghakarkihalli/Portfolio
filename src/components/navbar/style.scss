@@ -1,40 +1,138 @@
-.navbar {
-  height: 100px;
-  border: 1px solid red;
+@import '@common/styles/style';
+
+.outer {
+  height: 54px;
+  width: 100%;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  background: white;
+  &__scroll {
+    box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.navbar {
+  height: 100%;
+  border: 1px solid;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
   &__logo {
-    width: 120px;
+    width: 80px;
     padding: 0 16px;
+    &--light-blue {
+      color: $light-blue;
+      stroke: $light-blue;
+      fill: $light-blue;
+    }
+    &--dark-blue {
+      color: $dark-blue;
+      stroke: $dark-blue;
+      fill: $dark-blue;
+    }
+    &--red {
+      color: $red;
+      stroke: $red;
+      fill: $red;
+    }
+    &--yellow {
+      color: $yellow;
+      stroke: $yellow;
+      fill: $yellow;
+    }
+    &--light-green {
+      color: $light-green;
+      stroke: $light-green;
+      fill: $light-green;
+    }
+    &--dark-green {
+      color: $dark-green;
+      stroke: $dark-blue;
+      fill: $dark-blue;
+    }
+  }
+  &__slider {
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    margin: 0 20px;
+    @include typography(xl);
+    &--light-blue {
+      color: $light-blue;
+    }
+    &--dark-blue {
+      color: $dark-blue;
+    }
+    &--red {
+      color: $red;
+    }
+    &--yellow {
+      color: $yellow;
+    }
+    &--light-green {
+      color: $light-green;
+    }
+    &--dark-green {
+      color: $dark-green;
+    }
   }
   &__list {
-    margin: 0 8px;
+    margin: 0 20px;
     background: none;
     border: none;
     height: 40px;
-    width: 128px;
     cursor: pointer;
-    font-size: 16px;
+    display: none;
+    @include typography(m);
     &--link {
-      width: 80px;
-      color: red;
+      width: 40px;
+    }
+    &--light-blue {
+      color: $light-blue;
+    }
+    &--dark-blue {
+      color: $dark-blue;
+    }
+    &--red {
+      color: $red;
+    }
+    &--yellow {
+      color: $yellow;
+    }
+    &--light-green {
+      color: $light-green;
+    }
+    &--dark-green {
+      color: $dark-green;
     }
     &--active {
       background: none;
       border: none;
       font-weight: 700;
-      color: blue;
     }
   }
 }
 
 .my-logo {
-  stroke: red;
   stroke-width: 36px;
-  fill: red;
+}
+
+@include mobile-up {
+  .outer {
+    height: 100px;
+  }
+  .navbar {
+    max-width: 1024px;
+    width: 100%;
+    &__logo {
+      width: 120px;
+    }
+    &__slider {
+      display: none;
+    }
+  }
 }
