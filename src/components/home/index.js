@@ -3,6 +3,7 @@ import './style.scss'
 
 import IntroTitle from './intro-title'
 import ImageTitle from './image-title'
+import PersonalDetails from './personal-details'
 
 const Home = React.forwardRef((props, homeRef) => {
   return (
@@ -11,6 +12,7 @@ const Home = React.forwardRef((props, homeRef) => {
         <ImageTitle />
         <IntroTitle />
       </div>
+      <PersonalDetails />
     </div>
   )
 })

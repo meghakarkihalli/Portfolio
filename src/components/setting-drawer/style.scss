@@ -14,6 +14,7 @@
   background: $white;
   overflow: hidden;
   transition: left 0.5s linear;
+  z-index: 999;
   &__showDrawer {
     left: 160px;
     transition: left 0.5s linear;
@@ -58,6 +59,7 @@
   top: 20%;
   left: -168px;
   transition: left 0.5s linear;
+  z-index: 999;
   &__clicked{
     left: 0;
     transition: left 0.5s linear;

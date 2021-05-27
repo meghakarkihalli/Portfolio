@@ -6,15 +6,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: white;
+  z-index: 999;
   &__scroll {
+    background: $white;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
   }
 }
 
 .navbar {
   height: 100%;
-  border: 1px solid;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -80,41 +80,6 @@
       color: $dark-green;
     }
   }
-  &__list {
-    margin: 0 20px;
-    background: none;
-    border: none;
-    height: 40px;
-    cursor: pointer;
-    display: none;
-    @include typography(m);
-    &--link {
-      width: 40px;
-    }
-    &--light-blue {
-      color: $light-blue;
-    }
-    &--dark-blue {
-      color: $dark-blue;
-    }
-    &--red {
-      color: $red;
-    }
-    &--yellow {
-      color: $yellow;
-    }
-    &--light-green {
-      color: $light-green;
-    }
-    &--dark-green {
-      color: $dark-green;
-    }
-    &--active {
-      background: none;
-      border: none;
-      font-weight: 700;
-    }
-  }
 }
 
 .my-logo {
@@ -131,8 +96,13 @@
     &__logo {
       width: 120px;
     }
+  }
+}
+
+@include tablet-up {
+  .navbar {
     &__slider {
-      display: none;
+      display: none
     }
   }
 }

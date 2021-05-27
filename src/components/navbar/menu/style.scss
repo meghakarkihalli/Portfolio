@@ -1,0 +1,63 @@
+@import '@common/styles/style';
+
+.nav-menu {
+    background-color: $white;
+    height: 0;
+    transition: height 0.3s;
+    display: flex;
+    flex-direction: column;
+    z-index: -10;
+    overflow: hidden;
+    &--hide {
+      display: none;
+    }
+    &--drawer {
+      height: 240px;
+      transition: height 0.3s;
+    }
+  &__list {
+    margin: 0 20px;
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    @include typography(m);
+    &--link {
+      width: 40px;
+    }
+    &--light-blue {
+      color: $light-blue;
+    }
+    &--dark-blue {
+      color: $dark-blue;
+    }
+    &--red {
+      color: $red;
+    }
+    &--yellow {
+      color: $yellow;
+    }
+    &--light-green {
+      color: $light-green;
+    }
+    &--dark-green {
+      color: $dark-green;
+    }
+    &--active {
+      font-weight: 700;
+    }
+  }
+}
+
+@include tablet-up {
+  .nav-menu {
+    background-color: transparent;
+    height: auto;
+    flex-direction: row;
+    display: none;
+    z-index: 99;
+    &--hide {
+      display: flex;
+    }
+  }
+}

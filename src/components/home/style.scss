@@ -7,7 +7,6 @@
   padding-top: 56px;
   &__container{
     padding: 8px;
-    border: 1px solid;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -17,7 +16,7 @@
 
 @include mobile-up {
   .home {
-    height: 640px;
+    height: 520px;
     padding-top: 112px;
     &__container {
       padding: 24px 0;

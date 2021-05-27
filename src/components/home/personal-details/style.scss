@@ -1,0 +1,58 @@
+@import '@common/styles/style';
+
+.personal-details {
+  margin: 8px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 0.5px solid $light-gray;
+  border-radius: 8px;
+  box-shadow: 0px 10px 33px rgba(0, 0, 0, 0.1);
+  background: $white;
+  position: relative;
+  width: 80%;
+  &__details {
+    color: $white;
+    border-radius: 8px;
+    &--header {
+      @include typography(l, semi-bold);
+      border-bottom: 0.5px dashed;
+      padding: 8px;
+      margin: 0 16px;
+    }
+    &--light-blue {
+      background: $light-blue;
+    }
+    &--dark-blue {
+      background: $dark-blue;
+    }
+    &--red {
+      background: $red;
+    }
+    &--yellow {
+      background: $yellow;
+    }
+    &--light-green {
+      background: $light-green;
+    }
+    &--dark-green {
+      background: $dark-green;
+    }
+  }
+  
+}
+
+@include mobile-up {
+  .personal-details {
+    flex-direction: row;
+    max-width: 1024px;
+    position: relative;
+    width: 100%;
+    &__details {
+      width: 30%;
+    }
+    &__objective {
+    width: 70%;
+  }
+  }
+}
